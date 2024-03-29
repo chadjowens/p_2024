@@ -3,3 +3,6 @@
 @tailwind utilities;
 
 
+html {
+    --line-color: #dee0e4;
+}

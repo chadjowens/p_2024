@@ -1,9 +1,10 @@
 // import Image from 'next/image'
-import About from '@/components/about';
 import Intro from '@/components/intro';
-import Projects from '@/components/projects';
 import SectionDivider from '@/components/section-divider';
+import About from '@/components/about';
+import Projects from '@/components/projects';
 import Skills from '@/components/skills';
+import Experience from '@/components/experience';
 
 
 export default function Home() {
@@ -14,6 +15,9 @@ export default function Home() {
       <About />
       <Projects />
       <Skills />
+      {/* <div className="absolute"> */}
+        <Experience />
+      {/* </div> */}
 
     </main>
   );
