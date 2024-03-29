@@ -2,9 +2,10 @@
 
 import React, { useState, createContext, useContext }  from 'react'
 // import { useState } from'react';
-import { links } from '@/lib/data';
+// import { links } from '@/lib/data';
+import type { SectionName } from '@/lib/types';
 
-type SectionName = (typeof links)[number]["name"]; 
+// type SectionName = (typeof links)[number]["name"]; 
 // 'Home' | 'About' | 'Projects' | 'Skills' | 'Experience' | 'Contact';
 
 type ActiveSectionContextProviderProps = {
