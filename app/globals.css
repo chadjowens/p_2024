@@ -6,3 +6,7 @@
 html {
     --line-color: #dee0e4;
 }
+
+.borderBlack {
+    @apply border border-black/15;
+}
