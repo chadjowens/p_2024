@@ -5,6 +5,7 @@ import SectionHeading from './section-heading'
 import { FaPaperPlane } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { useSectionInView } from '@/lib/hooks';
+import { sendEmail } from '@/actions/sendEmail';
 
 export default function Contact() {
     const { ref } = useSectionInView('Contact');
@@ -22,9 +23,27 @@ export default function Contact() {
         >
             <SectionHeading>Contact Me</SectionHeading>
                 <p className="text-gray-700 -mt-6"> Please contact me me at <a className="underline" href="mailto:chadjowens@gmail.com"> chadjowens@gmail.com </a>{" "} or through this form. </p>
-                <form className="mt-10 flex flex-col">
-                    <input className="h-14 px-4 rounded-lg borderBlack focus:outline-none focus:border-gray-950 focus:border-2" placeholder="Your email" type="email" />
-                    <textarea className="h-52 my-3 p-4 rounded-lg borderBlack focus:outline-none focus:border-gray-950 focus:border-2" placeholder="Your email"/> 
+                <form 
+                    className="mt-10 flex flex-col"
+                    action={async (formData) => {
+                        await sendEmail(formData);
+                    }}
+                >
+                    <input 
+                    className="h-14 px-4 rounded-lg borderBlack focus:outline-none focus:border-gray-950 focus:border-2" 
+                    name="senderEmail"
+                    placeholder="Your email" 
+                    type="email" 
+                    required
+                    maxLength={500}
+                />
+                    <textarea 
+                    className="h-52 my-3 p-4 rounded-lg borderBlack focus:outline-none focus:border-gray-950 focus:border-2" 
+                    name="message"
+                    placeholder="Your email"
+                    required
+                    maxLength={5000}
+                /> 
                     <button 
                         type="submit"
                         className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105"
