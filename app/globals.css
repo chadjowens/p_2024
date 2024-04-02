@@ -22,3 +22,7 @@ html.dark {
 .dark input:focus, .dark textarea:focus {
     background-color: rgba(255, 255, 255, 1); /* Adjust the color and opacity as needed */
 }
+
+/* .projects-container:nth-child(even) .project-content {
+    flex-direction: row-reverse;
+  } */
