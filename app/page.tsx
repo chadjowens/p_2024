@@ -7,20 +7,29 @@ import Skills from '@/components/skills';
 import Experience from '@/components/experience';
 import Contact from '@/components/contact';
 // import Footer from '@/components/footer';
+// import Head from 'next/head';
 
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center px-4">
-      <Intro />
-      <SectionDivider />
-      <About />
-      <Projects />
-      <Skills />
-      <Experience />
-      <Contact />
-      {/* <Footer /> */}
+    <>
+      {/* <Head>
+        <script src="three.r134.min.js"></script>
+        <script src="vanta.birds.min.js"></script>
+      </Head> */}
+      <main className="flex flex-col items-center px-4">
+        <Intro />
+        <SectionDivider />
+        <About />
+        <Projects />
+        <Skills />
+        <Experience />
+        <Contact />
+        {/* <Footer /> */}
 
-    </main>
+      </main>
+
+
+    </>
   );
 }
