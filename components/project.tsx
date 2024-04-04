@@ -48,10 +48,12 @@ ProjectProps) {
                 h-[24rem] md:h-[18rem] lg:h-[12rem]
                 
             
-                bg-gray-200 
-                rounded-lg 
+                bg-gray-100 
+                bg-opacity-20
+                rounded-lg
                 
-                hover:bg-gray-300  
+                hover:bg-gray-100  
+                hover:bg-opacity-40
                 transition
                 relative 
                 
@@ -72,7 +74,7 @@ ProjectProps) {
                         <p className="mt-2 text-sm font-extralight text-gray-800 dark:text-white/70">{description}</p>
                         <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
                             {tags.map((tag, index) => (
-                                <li className="bg-black/[0.6] px-3 py-1 text-[0.6rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                                <li className="bg-black/[0.6] px-3 py-1 text-[0.6rem] uppercase tracking-wider text-white rounded-lg dark:text-white/70"
                                 key={index}>{tag}</li>
                             ))}
                         </ul>
